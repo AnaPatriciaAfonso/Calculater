@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+    <title>Calculator</title>
+    <link id="Style" href="styles/white.css" rel="stylesheet">
+    <link href="styles/switch.css" rel="stylesheet">
+    <script type="text/javascript" src="Calculator.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body onload=" insert();">
+    <table>
+        <tr>
+            <td>
+                <label class="switch">
+                    <input type="checkbox" onclick="myFunction()">
+                    <span class="slider round"></span> 
+                </label>
+            </td>
+            <td>
+                <div id="modeDayNight">Day Mode</div>
+            </td>
+        </tr>
+    </table>
+
+    
+    <div id="Calculator">
+        <table id="tabela">
+            <tr id="linha1">
+                <td colspan="4" id="resultado" ></td>
+            </tr>
+            <tr>
+                <td class="buttonsize"><button value="CE" onclick="pressCE()">CE</button></td>
+                <td class="buttonsize"><button value="C" onclick="pressC()">C</button></td>
+                <td class="buttonsize"><button value="CLEAR" onclick="pressCLEAR()">&#8592</button></td>
+                <td class="buttonsize"><button value="/" onclick="pressOperation('/')">/</button></td>
+            </tr>
+            <tr>
+                <td class="buttonsize"><button value="7" onclick="pressNumber('7')" >7</button></td>
+                <td class="buttonsize"><button value="8" onclick="pressNumber('8')" >8</button></td>
+                <td class="buttonsize"><button value="9" onclick="pressNumber('9')" >9</button></td>
+                <td class="buttonsize"><button value="x" onclick="pressOperation('*')">x</button></td>
+            </tr>
+            <tr>
+                <td class="buttonsize"><button value="4" onclick="pressNumber('4')" >4</button></td>
+                <td class="buttonsize"><button value="5" onclick="pressNumber('5')" >5</button></td>
+                <td class="buttonsize"><button value="6" onclick="pressNumber('6')" >6</button></td>
+                <td class="buttonsize"><button value="-" onclick="pressOperation('-')">-</button></td>
+            </tr>
+            <tr>
+                <td class="buttonsize"><button value="1" onclick="pressNumber('1')" >1</button></td>
+                <td class="buttonsize"><button value="2" onclick="pressNumber('2')" >2</button></td>
+                <td class="buttonsize"><button value="3" onclick="pressNumber('3')" >3</button></td>
+                <td class="buttonsize"><button value="+" onclick="pressOperation('+')">+</button></td>
+            </tr>
+            <tr>
+                <td class="buttonsize"><button value="+/-" onclick="pressPositiveNegative()">+/-</button></td>
+                <td class="buttonsize"><button value="0" onclick="pressNumber('0')" >0</button></td>
+                <td class="buttonsize"><button value="," onclick="pressNumber('.')">,</button></td>
+                <td class="buttonsize"><button value="=" onclick="pressResult()">=</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
